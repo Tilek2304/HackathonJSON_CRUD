@@ -4,7 +4,7 @@
         "title": "Bmw",
         "price": 7500,
         "created_date": "26.08.2022 18:51",
-        "change_date": "28.10.2022 13:51",
+        "updated_date": "28.10.2022 13:51",
         "description": "black  2003",
         "status": "sold"
     },
@@ -13,7 +13,7 @@
         "title": "Mercedes Benz",
         "price": 9900,
         "created_date": "26.08.2022 19:23",
-        "change_date": "26.08.2022 19:23",
+        "updated_date": "26.08.2022 19:23",
         "description": "5.0 black 2003",
         "status": "sold"
     },
@@ -22,7 +22,7 @@
         "title": "Toyota Camry",
         "price": 12000,
         "created_date": "26.08.2022 20:19",
-        "change_date": "26.08.2022 20:19",
+        "updated_date": "26.08.2022 20:19",
         "description": "2.5 white 2010",
         "status": "sold"
     },
@@ -31,7 +31,7 @@
         "title": "Subaru Forester",
         "price": 8500,
         "created_date": "26.08.2022 20:23",
-        "change_date": "26.08.2022 20:23",
+        "updated_date": "26.08.2022 20:23",
         "description": "4wd black 2.0 turbo",
         "status": "sold"
     },
@@ -40,16 +40,16 @@
         "title": "vaz",
         "price": 1200,
         "created_date": "26.08.2022 20:30",
-        "change_date": "26.08.2022 20:30",
         "description": "hlam",
-        "status": "sold"
+        "status": "sold",
+        "updated_date": "26.08.2022 21:29"
     },
     {
         "id": "203426",
         "title": "Volga",
         "price": 2500,
         "created_date": "26.08.2022 20:34",
-        "change_date": "26.08.2022 20:34",
+        "updated_date": "26.08.2022 20:34",
         "description": "1967 white",
         "status": "sold"
     }

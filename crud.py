@@ -98,15 +98,15 @@ def update():
         data: list = json.load(db)
         for obj in data:
             if obj['id'] == id_:
-                obj['title'] = input('Введите название: ') or obj['title'],
-                obj['price'] = input('Введите цену') or obj['price'] ,
-                obj['status'] = input('Введите статус продано/не продано: ') or obj['status'],
-                obj['created_date'] = obj['created_date'],
-                obj['updated_date'] = str(datetime.now().strftime('%d.%m.%Y %H:%M')),
+                obj['title'] = input('Введите название: ') or obj['title']
+                obj['price'] = input('Введите цену') or obj['price']
+                obj['status'] = input('Введите статус продано/не продано: ') or obj['status']
+                obj['created_date'] = obj['created_date']
+                obj['updated_date'] = str(datetime.now().strftime('%d.%m.%Y %H:%M'))
                 obj['description'] = input('Введите описание: ') or obj['description']
-                with open(DB, 'w') as db:
+                with open(DB, 'w+') as db:
                     json.dump(data, db, indent=4)
-                return []
+                return None
         print('Такого ID нет')
 
 def delete_data():
@@ -123,6 +123,8 @@ def delete_data():
 get_data()
 get_by_id()
 update()
+get_data()
+create()
 get_data()
 delete_data()
 get_data()
