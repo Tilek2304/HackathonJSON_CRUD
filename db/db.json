@@ -1,56 +1,74 @@
 [
     {
-        "id": "194755",
-        "title": "Bmw",
-        "price": 7500,
-        "created_date": "26.08.2022 18:51",
-        "updated_date": "28.10.2022 13:51",
-        "description": "black  2003",
+        "id": "020823",
+        "title": "zergling",
+        "price": 25,
+        "created_date": "27.08.2022 02:08",
+        "updated_date": "27.08.2022 02:08",
+        "description": "the smallest zerg in swarm",
         "status": "sold"
     },
     {
-        "id": "192253",
-        "title": "Mercedes Benz",
-        "price": 9900,
-        "created_date": "26.08.2022 19:23",
-        "updated_date": "26.08.2022 19:23",
-        "description": "5.0 black 2003",
+        "id": "020951",
+        "title": "baneling",
+        "price": 100,
+        "created_date": "27.08.2022 02:10",
+        "updated_date": "27.08.2022 02:10",
+        "description": "it can explode and deal increased damage against light armor",
+        "status": "not sold"
+    },
+    {
+        "id": "021138",
+        "title": "rouch",
+        "price": 75,
+        "created_date": "27.08.2022 02:11",
+        "updated_date": "27.08.2022 02:11",
+        "description": "tenacious, acid unit, has heavy armor",
         "status": "sold"
     },
     {
-        "id": "201743",
-        "title": "Toyota Camry",
-        "price": 12000,
-        "created_date": "26.08.2022 20:19",
-        "updated_date": "26.08.2022 20:19",
-        "description": "2.5 white 2010",
+        "id": "021251",
+        "title": "ravager",
+        "price": 100,
+        "created_date": "27.08.2022 02:13",
+        "updated_date": "27.08.2022 02:13",
+        "description": "walking artillery, especially effective against enemy mechanical units",
+        "status": "not sold"
+    },
+    {
+        "id": "021423",
+        "title": "hidralisk",
+        "price": 150,
+        "created_date": "27.08.2022 02:14",
+        "updated_date": "27.08.2022 02:14",
+        "description": "Powerful ranged unit, fast crawling, effective against enemy air units",
         "status": "sold"
     },
     {
-        "id": "202338",
-        "title": "Subaru Forester",
-        "price": 8500,
-        "created_date": "26.08.2022 20:23",
-        "updated_date": "26.08.2022 20:23",
-        "description": "4wd black 2.0 turbo",
+        "id": "021553",
+        "title": "lurker",
+        "price": 250,
+        "created_date": "27.08.2022 02:16",
+        "updated_date": "27.08.2022 02:16",
+        "description": "burrowed ranged unit, deals huge area damage, indispensable against any enemy ground army",
+        "status": "not sold"
+    },
+    {
+        "id": "021719",
+        "title": "ultralisk",
+        "price": 350,
+        "created_date": "27.08.2022 02:17",
+        "updated_date": "27.08.2022 02:17",
+        "description": "A huge melee ground unit that deals massive melee area damage while immune to stuns and other effects.",
         "status": "sold"
     },
     {
-        "id": "203011",
-        "title": "vaz",
-        "price": 1200,
-        "created_date": "26.08.2022 20:30",
-        "description": "hlam",
-        "status": "sold",
-        "updated_date": "26.08.2022 21:29"
-    },
-    {
-        "id": "203426",
-        "title": "Volga",
-        "price": 2500,
-        "created_date": "26.08.2022 20:34",
-        "updated_date": "26.08.2022 20:34",
-        "description": "1967 white",
-        "status": "sold"
+        "id": "021912",
+        "title": "infestor",
+        "price": 100,
+        "created_date": "27.08.2022 02:19",
+        "updated_date": "27.08.2022 02:19",
+        "description": "portable laboratory, can infect enemy combat units and take control of any enemy combat unit with a neuroparasite",
+        "status": "not sold"
     }
 ]

@@ -13,7 +13,7 @@ from datetime import datetime
     #     "status": "1"
     # },
 
-def get_data(filter_='price', page=0, fprice=1000000, fbool=True, created_date=None):
+def get_data(filter_='price', page=0, fprice=1000000, fbool=True, fcreated_date=None):
     with open(DB) as db:
         if filter_ == 'price':
             bd_list = json.load(db)
@@ -22,9 +22,10 @@ def get_data(filter_='price', page=0, fprice=1000000, fbool=True, created_date=N
                 title = i.get('title')
                 price = int(i.get('price'))
                 status = i.get('status')
+                created_date = i['created_date']
                 if price<fprice and fbool==True or price>fprice and fbool==False:
                     print('------------------------------------------------')
-                    print(f'id: {id_} | title: {title} | price: {price} | status: {status}')
+                    print(f'id: {id_} | title: {title} | price: {price} | status: {status} | created date: {created_date}')
                     print('------------------------------------------------')
                 # if page == 0:
                     
@@ -35,6 +36,7 @@ def get_data(filter_='price', page=0, fprice=1000000, fbool=True, created_date=N
                 title = i.get('title')
                 price = i.get('price')
                 status = i.get('status')
+                created_date = i['created_date']
                 if status=='продано' and fbool==True or status=='не продано' and fbool==False:
                     print('------------------------------------------------')
                     print(f'id: {id_} | title: {title} | price: {price} | status: {status}')
@@ -47,7 +49,8 @@ def get_data(filter_='price', page=0, fprice=1000000, fbool=True, created_date=N
                 title = i.get('title')
                 price = i.get('price')
                 status = i.get('status')
-                if created_date==i.get('created_date'):
+                created_date = i['created_date']
+                if fcreated_date==i.get('created_date'):
                     print('------------------------------------------------')
                     print(f'id: {id_} | title: {title} | price: {price} | status: {status}')
                     print('------------------------------------------------')
@@ -57,7 +60,7 @@ def create():
     data = {
         'id': datetime.now().strftime('%H%M%S'),
         'title': input('Введите название: '),
-        'price': input('Введите цену: '),
+        'price': int(input('Введите цену: ')),
         'created_date': str(datetime.now().strftime('%d.%m.%Y %H:%M')),
         'updated_date': str(datetime.now().strftime('%d.%m.%Y %H:%M')),
         'description': input('Введите описание: '),
@@ -70,17 +73,16 @@ def create():
         json.dump(json_data, db, indent=4)
 
 
-def get_by_id():
+def get_by_id(id_ = input('Введите ID: ')):
     with open(DB) as db:
-        id_ = input('Введите ID: ')
         for i in json.load(db):
-            if i.get('id') == id_:
-                title = i.get('title')
-                price = i.get('price')
-                status = i.get('status')
-                created_date = i.get('created_date')
-                updated_date = i.get('updated_date')
-                description = i.get('description')
+            if i['id'] == id_:
+                title = i['title']
+                price = i['price']
+                status = i['status']
+                created_date = i['created_date']
+                updated_date = i['updated_date']
+                description = i['description']
                 print(f'title: {title}')
                 print(f'price: {price}')
                 print(f'created date: {created_date}')
@@ -99,7 +101,7 @@ def update():
         for obj in data:
             if obj['id'] == id_:
                 obj['title'] = input('Введите название: ') or obj['title']
-                obj['price'] = input('Введите цену') or obj['price']
+                obj['price'] = int(input('Введите цену')) or obj['price']
                 obj['status'] = input('Введите статус продано/не продано: ') or obj['status']
                 obj['created_date'] = obj['created_date']
                 obj['updated_date'] = str(datetime.now().strftime('%d.%m.%Y %H:%M'))
@@ -109,9 +111,8 @@ def update():
                 return None
         print('Такого ID нет')
 
-def delete_data():
+def delete_data(id_ = input('Введите ID: ')):
     with open(DB) as db:
-        id_ = input('Введите ID: ')
         data: list = json.load(db)
         for obj in data:
             if obj['id'] == id_:
@@ -120,11 +121,3 @@ def delete_data():
                     json.dump(data, db, indent=4)
                 return []
         print('Такого ID нет')
-get_data()
-get_by_id()
-update()
-get_data()
-create()
-get_data()
-delete_data()
-get_data()
